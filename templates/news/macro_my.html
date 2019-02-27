@@ -1,0 +1,13 @@
+{% macro click_show(click_list) %}
+    <div class="rank_title">
+        <h3>点击排行</h3>
+    </div>
+    <ul class="rank_list">
+        {% for click in click_list %}
+            <li>
+                <span class="click{{ loop.index }}">{{ loop.index }}</span>
+                <a href="/{{ click.id }}">{{ click.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endmacro %}
