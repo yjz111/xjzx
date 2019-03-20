@@ -30,8 +30,8 @@ def index():
 def news_list(category_id):
     '''返回json格式的新闻数据'''
     # 接收新闻分类的编号category_id
-    # 查询指定分类的所有新闻数据
-    list1 = NewsInfo.query  # select * from newsinfo
+    # 查询指定分类的所有新闻数据 #查询已经通过的新闻
+    list1 = NewsInfo.query.filter_by(status=2)  # select * from newsinfo
     if category_id > 0:
         # 如果选择的是“最新”==0，表示所有分类的新闻
         list1 = list1.filter_by(category_id=category_id) # where ....

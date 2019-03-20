@@ -212,6 +212,7 @@ def news_review_detail(news_id):
     dict1 = request.form
     action = dict1.get('action')
     reason = dict1.get('reason')
+
     if action == 'accept':
         news.status = 2
     elif action == 'reject':
