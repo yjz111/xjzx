@@ -62,7 +62,7 @@ class NewsInfo(db.Model, BaseModel):
 
     @property
     def pic_url(self):
-        return 'http://pn5h0v8bf.bkt.clouddn.com/'+self.pic
+        return 'http://pop5odmif.bkt.clouddn.com/'+self.pic
 
 
 class UserInfo(db.Model, BaseModel):
@@ -122,7 +122,7 @@ class UserInfo(db.Model, BaseModel):
 
     @property
     def avatar_url(self):
-        return 'http://pn5h0v8bf.bkt.clouddn.com/'+self.avatar
+        return 'http://pop5odmif.bkt.clouddn.com/'+self.avatar
 
 
 
